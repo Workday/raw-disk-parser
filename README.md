@@ -2,7 +2,7 @@
 
 A proof-of-concept Python script to dump sensitive/restricted files (`SAM`, `SYSTEM`, `NTDS.dit`) without triggering alerts. It works by reading directly from the physical disk, then parsing out NTFS filesystem structures to locate and read files. This method doesn't call standard Windows file APIs, so it effectively evades file access controls, exclusive file locks, and certain EDR/AV monitoring capabilities that rely on hooking high-level file I/O operations.
 
-For a detailed technical breakdown of the technique, see the accompanying blog post: [Leveraging Raw Disk Reads to Bypass EDR](TODO: BLOG LINK HERE).
+For a detailed technical breakdown of the technique, see the accompanying blog post: [Leveraging Raw Disk Reads to Bypass EDR](https://medium.com/workday-engineering/leveraging-raw-disk-reads-to-bypass-edr-f145838b0e6d).
 
 **DISCLAIMER:** This tool is for educational and research purposes only. I am not responsible for how you use it. Only use this in a test environment. This has not been tested against all systems and in all conditions, and there may be unknown side effects/cause issues with the test machine.
 
